@@ -40,17 +40,17 @@
 
 // Your job is to write a function that accepts any band name as an argument. The function will increment a global variable by one each time it is invoked, and return that number, and the band name concatenated together.
 
-let bandNumber = 1
+// let bandNumber = 1
 
-const takeNumber = function(bandName) {
-    return `${bandNumber++}. ${bandName}`; //The ++ after bandNumber returns value BEFORE incrementing
-}
+// const takeNumber = function(bandName) {
+//     return `${bandNumber++}. ${bandName}`; //The ++ after bandNumber returns value BEFORE incrementing
+// }
 
-const scum = takeNumber("Galactic Scum")
-console.log(scum)  // This should print "1. Galactic Scum" in the console
+// const scum = takeNumber("Galactic Scum")
+// console.log(scum)  // This should print "1. Galactic Scum" in the console
 
-const under = takeNumber("Underdogs")
-console.log(under)  // This should print "2. Underdogs" in the console
+// const under = takeNumber("Underdogs")
+// console.log(under)  // This should print "2. Underdogs" in the console
 
 
 // Below, I'm playing around with the above assignment. However, I can't get the band to stay on the console and incrementally add more band names... Maybe need to have a form field in HTML and get the value of that to add to the console somehow...
@@ -63,3 +63,77 @@ console.log(under)  // This should print "2. Underdogs" in the console
 // }
 
 // bandAssignment("good band")
+
+
+
+
+
+
+
+
+
+
+
+// Practice: Cookout
+// Copy the following objects into your JavaScript file.
+
+const hamburger = {
+	name: 'Hamburger',
+	type: 'beef',
+	cooked: false,
+}
+const zucchini = {
+	name: 'Zucchini',
+	type: 'vegetable',
+	cooked: false,
+}
+const chickenBreast = {
+	name: 'Chicken Breast',
+	type: 'chicken',
+	cooked: false,
+}
+const corn = {
+	name: 'Corn',
+	type: 'vegetable',
+	cooked: false,
+}
+const steak = {
+	name: 'Steak',
+	type: 'beef',
+	cooked: false,
+}
+
+// An array that is grouping the objects together.
+const foods = [hamburger, zucchini, chickenBreast, corn, steak];
+
+// An empty array that will store the objects after the `grill()` function cooks the food.
+const cookedFood = [];
+
+// This exercise does not require you to alter this function. But read it. See if you can follow what it takes in, executes, and returns.
+
+// The grill() function. Copy this into your JavaScript as well.
+
+function grill (currentObject) {
+    
+        // Modify the food so that it is cooked
+        currentObject.cooked = true;
+    
+        // Put the cooked food into the appropriate array
+        cookedFood.push(currentObject);
+    };
+
+// Your task is to iterate over the array of foods and invoke the function for each item so that the cookedFood array contains all of the items after they are cooked.
+
+// for (i = 0; i < foods.length; i++) {
+// grill(foods[i]);
+// }
+
+// console.log(cookedFood);
+
+
+//This is another way to accomplish what I did above
+// foods.forEach(function(stuff){
+// grill(stuff)
+// })
+
+// console.log(cookedFood);
